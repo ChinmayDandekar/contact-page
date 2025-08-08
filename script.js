@@ -4,6 +4,10 @@
 const openModalBtn = document.getElementById("enquiry-btn");
 const modalOverlay = document.getElementById("modalOverlay");
 
+function closeModal() {
+  modalOverlay.classList.remove("active");
+
+}
 openModalBtn.addEventListener("click", () => {
   modalOverlay.classList.add("active");
 

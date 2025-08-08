@@ -54,7 +54,7 @@
           </div>
           <div class="input-wrapper">
             <!-- <label for="name" class="input-label">Name</label> -->
-            <input id="email" class="input" type="text" required />
+            <input id="email" class="input" type="text" style="text-transform: none " required />
             <label for="email" class="input-label">Email Address</label>
             <div class="error-message" id="error-email"></div>
           </div>
@@ -64,10 +64,10 @@
             <div class="error-message" id="error-mobile"></div>
           </div>
 
-          <div class="input-wrapper" style="display: flex; flex-direction: column; gap: 52px">
+          <div class="input-wrapper" style="display: flex; flex-direction: column; gap: 42px">
             <div id="dropdownContainer"></div>
 
-            <div class="error-message" id="error-queryType" style="margin-top: -45px"></div>
+            <div class="error-message" id="error-queryType" style="margin-top: -35px"></div>
           </div>
 
           <!-- Error container for second dropdown -->
@@ -134,7 +134,7 @@
     <div class="modal-content" style="position: relative">
       <div class="contact-form">
         <!-- Close Button -->
-        <button id="closeModalBtn">
+        <button onclick="closeModal()" id="closeModalBtn">
           <img src="assets/images/cross.svg" alt="" />
         </button>
         <div class="input-wrapper">
@@ -146,7 +146,7 @@
         </div>
         <div class="input-wrapper">
           <!-- <label for="name" class="input-label">Name</label> -->
-          <input id="email-modal" class="input" type="text" style="text-transform: none" required />
+          <input id="email-modal" class="input" type="text" style="text-transform: none " required />
           <label for="email-modal" class="input-label">Email Address</label>
           <div class="error-message" id="error-email-modal"></div>
         </div>
@@ -157,9 +157,9 @@
           <div class="error-message" id="error-mobile-modal"></div>
         </div>
 
-        <div class="input-wrapper" style="display: flex; flex-direction: column; gap: 52px">
+        <div class="input-wrapper" style="display: flex; flex-direction: column; gap: 38px">
           <div id="dropdownContainerModal"></div>
-          <div class="error-message" id="error-queryType-modal" style="margin-top: -45px"></div>
+          <div class="error-message" id="error-queryType-modal" style="margin-top: -35px"></div>
         </div>
 
         <button class="primary-button" style="margin-right: -3px">
@@ -173,7 +173,7 @@
     <section class="footer-wrapper">
       <div class="flex-horizontal-container main-footer" style="align-items: start; padding: 45px 0px">
         <div class="logo" style="margin-top: 8px">logo</div>
-        <div class="footer-links" style="margin-left: 70px">
+        <div class="footer-links" style="margin-left: 72px">
           <a href="#">Projects</a>
           <a href="#">About</a>
           <a href="#">NRI Area</a>
@@ -185,7 +185,7 @@
         </div>
 
         <div class="footer-mail" style="margin-right: 5px">
-          <h2 style="margin-top: 2px">Get the latest news</h2>
+          <h2 style="margin-top: 4px; margin-bottom: -3px">Get the latest news</h2>
           <input type="text" placeholder="Enter email" />
           <button class="primary-button" style="width: 130px; height: 40px">
             Subscribe

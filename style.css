@@ -4,6 +4,13 @@
 
 @font-face {
   font-family: "Helvetica Neue";
+  src: url("assets/fonts/HelveticaNeueLight.otf") format("opentype");
+  font-weight: 100;
+  font-style: regular;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
   src: url("assets/fonts/HelveticaNeueRoman.otf") format("opentype");
   font-weight: 300;
   font-style: regular;
@@ -276,7 +283,7 @@ body {
   margin-top: 78px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 38px;
   max-width: 475px;
 }
 
@@ -298,7 +305,7 @@ body {
   padding: 12px 25px;
   cursor: pointer;
   text-align: left;
-  font: 300 16px/32px Helvetica Neue;
+  font: 100 16px/32px Helvetica Neue;
   letter-spacing: 0px;
   color: #8e8e8e;
   transition: border-color 0.3s ease;
@@ -310,7 +317,7 @@ body {
 }
 
 .arrow {
-  margin-top: 15px;
+  margin-top: 12px;
   float: right;
   rotate: 180deg;
   transition: rotate 0.3s ease;
@@ -371,7 +378,8 @@ body {
   left: 25px;
   /* transform: translate(25px, 20px); */
 
-  font: 300 16px Helvetica Neue;
+  font: 100 16px Helvetica Neue;
+  letter-spacing: 0.24px;
 
   transition: transform 0.2s ease;
   color: #8e8e8e !important;
@@ -393,9 +401,11 @@ body {
 
   margin: 0;
   text-align: left;
-  font: 300 16px/32px Helvetica Neue;
+  font: 100 16px/32px "Helvetica Neue" !important;
   letter-spacing: 0px;
-  color: #3c3c3c !important;
+  color: #8e8e8e !important;;
+
+  /* color: #3c3c3c !important; */
 
   text-transform: capitalize;
   opacity: 1;
@@ -408,7 +418,7 @@ body {
 .primary-button {
   text-align: center;
   font: 100 12px/14px Museo Slab;
-  letter-spacing: 0px;
+  letter-spacing: 0.24px;
   color: #ffffff;
   opacity: 1;
 
@@ -457,8 +467,8 @@ body {
 
 .content-text {
   text-align: left;
-  font: 300 16px/32px Helvetica Neue;
-  letter-spacing: 0px;
+  font: 100 16px/32px Helvetica Neue;
+  letter-spacing: 0.24px;
   color: #8e8e8e;
   opacity: 1;
 }
@@ -489,39 +499,10 @@ body {
   /* gap: 12px; */
 }
 
-/* .input-label {
-  margin: 0;
-  text-align: left;
-  font: 300 16px/32px Helvetica Neue;
-  letter-spacing: 0px;
-  color: #8e8e8e;
-  text-transform: capitalize;
-  opacity: 1;
-} */
 
-.hero {
-  position: relative;
-  /* background: url("assets/images/map@2x.png") no-repeat center center;
-  background-size: cover;
-  padding: 80px 20px;  */
-  z-index: 10;
-}
 
-.overlay {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 40px;
-  max-width: 500px;
-  margin: 0 auto;
-  border-radius: 8px;
-}
-.contact-form h1 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-.field-group {
-  margin-bottom: 20px;
-}
+
+
 label {
   display: block;
   font-size: 14px;
@@ -545,24 +526,10 @@ input:focus,
 select:focus {
   border-color: #007bff;
 }
-.submit-btn {
-  width: 100%;
-  padding: 12px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  font-weight: 700;
-  font-size: 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-.submit-btn:hover {
-  background-color: #0056b3;
-}
 
 .map-pointer {
   position: absolute;
+  z-index: 20000;
   width: 60px;
   height: 60px;
   background: url("assets/images/pin-icon.svg") no-repeat center center;
@@ -572,9 +539,26 @@ select:focus {
   transform: translate(-50%, -100%);
   cursor: pointer;
   transition: transform 0.3s ease;
+
+    /* Add the pulse animation */
+  animation: pulse 1.5s infinite;
 }
 .map-pointer:hover {
+  cursor: pointer;
   transform: translate(-50%, -100%) scale(1.2);
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -100%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -100%) scale(1.15);
+  }
+  100% {
+    transform: translate(-50%, -100%) scale(1);
+  }
 }
 
 .map-text {
@@ -594,7 +578,7 @@ select:focus {
 /* ===================== */
 
 .modal-overlay {
-  display: none; /* hidden by default */
+  display: none; 
   position: fixed;
   top: 0;
   left: 0;
@@ -624,6 +608,10 @@ select:focus {
 .modal-content .contact-form {
   margin-top: 30px !important;
   gap: 30px;
+}
+
+.modal-content .primary-button{
+  width: 100%;
 }
 
 #closeModalBtn {
@@ -683,8 +671,8 @@ footer {
   width: 134px;
   text-decoration: none;
   text-transform: capitalize;
-  font: 300 14px/32px Helvetica Neue;
-  letter-spacing: 0px;
+  font: 100 14px/32px Helvetica Neue;
+  letter-spacing: 0.24px;
   color: #383838;
 
   transition: color 0.3s ease;
@@ -696,8 +684,8 @@ footer {
 
 .footer-subtext {
   text-align: center;
-  font: 300 14px/38px Helvetica Neue;
-  letter-spacing: 0px;
+  font: 100 14px/38px Helvetica Neue;
+  letter-spacing: 0.24px;
   color: #818181;
   opacity: 1;
 }
@@ -713,6 +701,8 @@ footer {
 }
 
 .footer-mail {
+  max-width: 272px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -721,13 +711,13 @@ footer {
 }
 
 .footer-mail input {
-  width: 272px;
+  width:100%;
   outline: none;
   border: 1px solid #f0f0f0;
   border-radius: 2px;
   text-align: left;
-  font: 300 14px/30px Helvetica Neue;
-  letter-spacing: 0px;
+  font: 100 14px/30px Helvetica Neue;
+  letter-spacing: 0.24px;
   padding: 4px 10px;
   color: #818181;
   opacity: 1;
@@ -739,6 +729,7 @@ footer {
   letter-spacing: 0px;
   color: #818181;
   opacity: 1;
+  /* margin-top: 5px; */
 }
 
 .to-top {
@@ -882,8 +873,13 @@ footer {
     display: grid;
     place-items: center;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px 35px; /* optional: adds spacing between the items */
-    /* gap */
+    gap: 10px 35px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .footer-mail{
+    max-width: 500px !important;
   }
 
   .footer-mail button {
@@ -912,7 +908,7 @@ footer {
   }
 
   .content-text {
-    font: 300 16px/32px Helvetica Neue;
+    font: 100 16px/32px Helvetica Neue;
     letter-spacing: 0px;
     color: #383838;
     opacity: 1;
@@ -948,7 +944,7 @@ footer {
   }
 
   .footer-mail {
-    max-width: 300px !important;
+    max-width: 300px ;
   }
 
   .footer-mail input {
