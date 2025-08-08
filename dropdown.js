@@ -58,9 +58,7 @@ function createDropdown({ container, placeholder, options, onSelect }) {
   container.appendChild(dropdown);
 }
 
-// ---------------------------
-// Example usage with linking
-// ---------------------------
+
 const subOptionsData = {
   Projects: ["Project 1", "Project 2", "Project 3"],
   Media: ["Media 1", "Media 2", "Media 3"],
@@ -76,16 +74,6 @@ createDropdown({
   container: dropdownContainer,
   placeholder: "Query Type",
   options: Object.keys(subOptionsData),
-  //   onSelect: (selectedCategory) => {
-  //     // clear second dropdown
-  //     secondContainer.innerHTML = "";
-  //     // build second dropdown
-  //     createDropdown({
-  //       container: secondContainer,
-  //       placeholder: `Select ${selectedCategory} option`,
-  //       options: subOptionsData[selectedCategory],
-  //     });
-  //   },
   onSelect: (selectedCategory) => {
     // remove old second container if exists
     const existingSecond = document.getElementById("secondDropdownContainer");
