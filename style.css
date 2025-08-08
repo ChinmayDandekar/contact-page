@@ -1,0 +1,962 @@
+/* ===================== */
+/*     Museo Slab Font   */
+/* ===================== */
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("assets/fonts/HelveticaNeueRoman.otf") format("opentype");
+  font-weight: 300;
+  font-style: regular;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("assets/fonts/HelveticaNeueMedium.otf") format("opentype");
+  font-weight: 500;
+  font-style: medium;
+}
+
+@font-face {
+  font-family: "Museo Slab";
+  src: url("assets/fonts/Museo_Slab_100.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Museo Slab";
+  src: url("assets/fonts/Museo_Slab_300.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Museo Slab";
+  src: url("assets/fonts/Museo_Slab_500.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Museo Slab";
+  src: url("assets/fonts/Museo_Slab_700.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ===================== */
+/*        Reset          */
+/* ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clear-btn {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  background: transparent;
+}
+
+body {
+  font-family: "Museo Slab", serif;
+  background-color: #ffffff;
+  color: #333;
+  /* line-height: 1.6; */
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.logo {
+  text-align: left;
+
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.26px;
+  line-height: 15px;
+  color: #3c3c3c;
+  opacity: 1;
+  padding: 10px 24px;
+  background: #e4e4e4 0% 0% no-repeat padding-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0px;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+/* ===================== */
+/*     Navigation Bar   */
+/* ===================== */
+
+.nav-bar {
+  background: transparent;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 0 100px;
+
+  transition: background-color 0.3s ease;
+}
+/* .nav-bar .logo {
+  font-weight: 700;
+  font-size: 24px;
+} */
+.desktop-nav,
+.mobile-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  font-weight: 500;
+  font-size: 13px;
+}
+.desktop-nav a,
+.mobile-nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font: 500 13px/15px Museo Slab;
+  letter-spacing: 0.26px;
+  color: #3c3c3c;
+  opacity: 1;
+  transition: color 0.3s ease;
+  /* font-weight: 500; */
+  /* font-size: 13px; */
+}
+.desktop-nav a:hover,
+.mobile-nav a:hover {
+  color: #007bff;
+}
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 0px 2px 10px #ededed;
+}
+.mobile-nav.open {
+  display: flex;
+}
+
+/* ===================== */
+/*     Hero Section     */
+/* ===================== */
+.hero-banner {
+  background: url("assets/images/hero.jpg") center/cover no-repeat;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+.hero-banner h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.hero-banner p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/* =================== */
+/*        Main Body    */
+/* =================== */
+
+.main-content-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 20;
+}
+
+.main-content {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  padding-top: 80px;
+  padding-bottom: 110px;
+  position: relative;
+  z-index: 20;
+}
+
+.map-container {
+  background: transparent url("assets/images/map@2x.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-position-x: 0px;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  width: 729px;
+  height: 683px;
+}
+
+.sub-content {
+  width: 100%;
+  padding: 0px 100px;
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+}
+
+.content-title {
+  text-align: left;
+  font: 300 36px/54px Museo Slab;
+  letter-spacing: 0px;
+  color: #3c3c3c;
+  opacity: 1;
+  margin-bottom: 55px;
+}
+
+.content-description {
+  /* height: 71px; */
+  text-align: left;
+  font: 100 22px/44px Museo Slab;
+  letter-spacing: 0px;
+  color: #646464;
+  opacity: 1;
+}
+
+.vertical-divider {
+  border: 1px solid #f0f0f0;
+  opacity: 1;
+  height: 954px;
+  margin-top: 146px;
+  z-index: 20;
+  /* align-self: baseline; */
+}
+
+/* ===================== */
+/*      Contact Form    */
+/* ===================== */
+.contact-form {
+  margin-top: 78px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 475px;
+}
+
+.custom-dropdown {
+  position: relative;
+  max-width: 475px;
+}
+
+.custom-dropdown label {
+  font-size: 14px;
+  color: #888;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.dropdown-selected {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 12px 25px;
+  cursor: pointer;
+  text-align: left;
+  font: 300 16px/32px Helvetica Neue;
+  letter-spacing: 0px;
+  color: #8e8e8e;
+  transition: border-color 0.3s ease;
+  opacity: 1;
+}
+
+.dropdown-selected:hover {
+  border-color: #3971b1;
+}
+
+.arrow {
+  margin-top: 15px;
+  float: right;
+  rotate: 180deg;
+  transition: rotate 0.3s ease;
+  z-index: 50;
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  right: 0;
+  background: #fafafa 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 1px #00000029;
+  display: none;
+  z-index: 100;
+  font: 300 16px/32px Helvetica Neue;
+  letter-spacing: 0px;
+  color: #8e8e8e;
+}
+
+.dropdown-options div {
+  border-top: 1px solid #8e8e8e;
+  padding: 25px;
+  cursor: pointer;
+}
+
+.dropdown-options div:hover {
+  background: #f0f0f0;
+}
+
+.selected {
+  font-weight: bold;
+}
+
+.dropdown-options .checkmark {
+  float: right;
+  color: #3971b1;
+}
+
+.contact-form .form-title {
+  /* margin-bottom: 10px; */
+}
+
+.form-title {
+  text-align: left;
+  font: 300 26px/54px Museo Slab;
+  letter-spacing: 0px;
+  color: #3971b1;
+  opacity: 1;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-label {
+  position: absolute;
+  z-index: 50;
+  top: 20px;
+  left: 25px;
+  /* transform: translate(25px, 20px); */
+
+  font: 300 16px Helvetica Neue;
+
+  transition: transform 0.2s ease;
+  color: #8e8e8e !important;
+}
+
+.input:focus + .input-label, .input:valid + .input-label {
+  transform: translate(-25px, -34px) scale(0.88);
+  /* transform: translate(0px, 0px) scale(0.88); */
+}
+
+.input {
+  /* position: absolute; */
+  border: none;
+  border-bottom: 1px solid #d3d3d3;
+  opacity: 1;
+  outline: none;
+  border-radius: 0;
+  padding: 12px 25px;
+
+  margin: 0;
+  text-align: left;
+  font: 300 16px/32px Helvetica Neue;
+  letter-spacing: 0px;
+  color: #3c3c3c !important;
+
+  text-transform: capitalize;
+  opacity: 1;
+}
+
+.input::placeholder {
+  color: #8e8e8e !important;
+}
+
+.primary-button {
+  text-align: center;
+  font: 100 12px/14px Museo Slab;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+
+  background: #3971b1 0% 0% no-repeat padding-box;
+  width: 150px;
+  height: 45px;
+  border: none;
+}
+
+.contact-form .primary-button {
+  margin-top: 35px;
+  align-self: flex-end;
+}
+
+.primary-button:hover {
+  background: #4580c4 0% 0% no-repeat padding-box;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+}
+
+.error-message {
+  color: red;
+  margin-top: 4px;
+  font: 300 12px Helvetica Neue;
+}
+
+/* =================== */
+/* Extra Info */
+/* =================== */
+
+.extra-info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 658px;
+  z-index: 100;
+}
+
+.content-subtitle {
+  text-align: left;
+  font: 300 28px/42px Museo Slab;
+  letter-spacing: 0px;
+  color: #383838;
+  opacity: 1;
+}
+
+.content-text {
+  text-align: left;
+  font: 300 16px/32px Helvetica Neue;
+  letter-spacing: 0px;
+  color: #8e8e8e;
+  opacity: 1;
+}
+
+.content-head {
+  display: none;
+}
+
+.extra-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: -8px;
+}
+
+.extra-info-section div {
+  display: flex;
+  flex-direction: column;
+  /* gap: 12px; */
+}
+
+.extra-info-section div div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  /* gap: 12px; */
+}
+
+/* .input-label {
+  margin: 0;
+  text-align: left;
+  font: 300 16px/32px Helvetica Neue;
+  letter-spacing: 0px;
+  color: #8e8e8e;
+  text-transform: capitalize;
+  opacity: 1;
+} */
+
+.hero {
+  position: relative;
+  /* background: url("assets/images/map@2x.png") no-repeat center center;
+  background-size: cover;
+  padding: 80px 20px;  */
+  z-index: 10;
+}
+
+.overlay {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+.contact-form h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.field-group {
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+dropdown-selected,
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+input:hover,
+select:hover,
+input:focus,
+select:focus {
+  border-color: #007bff;
+}
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.map-pointer {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: url("assets/images/pin-icon.svg") no-repeat center center;
+  background-size: contain;
+  top: 475.98px;
+  left: 283.98px;
+  transform: translate(-50%, -100%);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.map-pointer:hover {
+  transform: translate(-50%, -100%) scale(1.2);
+}
+
+.map-text {
+  position: absolute;
+  top: 20px;
+  right: 100px;
+  text-align: right;
+  font: 100 12px/14px Museo Slab;
+  letter-spacing: 0.4px;
+  color: #afafaf;
+  opacity: 1;
+  z-index: 100;
+}
+
+/* ===================== */
+/* Mobile Modal */
+/* ===================== */
+
+.modal-overlay {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-content {
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  padding: 2rem;
+  /* border-radius: 8px; */
+  max-width: 500px;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.modal-content .contact-form {
+  margin-top: 30px !important;
+  gap: 30px;
+}
+
+#closeModalBtn {
+  position: absolute;
+  width: 28.28;
+  height: 28.28;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 50;
+}
+
+#closeModalBtn img {
+  width: 28.28;
+  height: 28.28;
+}
+
+/* ===================== */
+/*        Footer        */
+/* ===================== */
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #f4f4f4 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.footer-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-horizontal-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.footer-links a {
+  width: 134px;
+  text-decoration: none;
+  text-transform: capitalize;
+  font: 300 14px/32px Helvetica Neue;
+  letter-spacing: 0px;
+  color: #383838;
+
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #007bff;
+}
+
+.footer-subtext {
+  text-align: center;
+  font: 300 14px/38px Helvetica Neue;
+  letter-spacing: 0px;
+  color: #818181;
+  opacity: 1;
+}
+
+.footer-img {
+  width: auto;
+  height: auto;
+}
+
+.horizontal-divider {
+  border-bottom: 1px solid #eaeaea;
+  opacity: 1;
+}
+
+.footer-mail {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 5px;
+  /* margin-right:-20px */
+}
+
+.footer-mail input {
+  width: 272px;
+  outline: none;
+  border: 1px solid #f0f0f0;
+  border-radius: 2px;
+  text-align: left;
+  font: 300 14px/30px Helvetica Neue;
+  letter-spacing: 0px;
+  padding: 4px 10px;
+  color: #818181;
+  opacity: 1;
+}
+
+.footer-mail h2 {
+  text-align: left;
+  font: 500 18px/22px Museo Slab;
+  letter-spacing: 0px;
+  color: #818181;
+  opacity: 1;
+}
+
+.to-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  align-self: end;
+  gap: 10px;
+}
+
+.to-top img {
+  width: 45px;
+  height: 45px;
+}
+
+.to-top p {
+  text-align: left;
+  font: 300 14px/32px Helvetica Neue;
+  letter-spacing: 0px;
+  color: #383838;
+  opacity: 1;
+}
+
+#enquiry-btn {
+  display: none;
+}
+
+/* ===================== */
+/*      Responsive      */
+/* ===================== */
+
+@media (max-width: 700px) {
+  .nav-bar {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .sub-content {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .footer-mail {
+    width: 100% !important;
+  }
+
+  .footer-mail input {
+    width: 100% !important;
+  }
+
+  #enquiry-btn {
+    margin-top: 350px !important;
+    margin-bottom: 0px !important;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .desktop-nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    /* position: absolute;
+    right: 20px;
+    top: 25px; */
+  }
+  .overlay {
+    width: 100%;
+    padding: 20px;
+  }
+  .hero-banner h1 {
+    font-size: 28px;
+  }
+  .hero-banner p {
+    font-size: 16px;
+  }
+
+  .nav-bar {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .sub-content {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .map-container {
+    background-position-x: 280px !important;
+  }
+
+  .map-pointer {
+    left: 563.98px !important;
+  }
+
+  .content-subtitle {
+    font: 300 24px/36px Museo Slab;
+  }
+
+  /* .contact-form {
+    display: hidden !important;
+    overflow: none;
+    } */
+
+  .form-title {
+    font: 300 24px/36px Museo Slab;
+  }
+
+  .footer-wrapper {
+    padding: 0 20px;
+  }
+
+  .flex-horizontal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .main-footer {
+    flex-direction: column-reverse !important;
+  }
+
+  .sub-footer {
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+
+  .flex-horizontal-container .footer-subtext {
+    margin: 0 !important;
+  }
+
+  .to-top {
+    display: none;
+  }
+
+  .footer-links {
+    margin: 0 !important;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 35px; /* optional: adds spacing between the items */
+    /* gap */
+  }
+
+  .footer-mail button {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  #contact-container {
+    display: none;
+  }
+
+  .map-text {
+    display: none;
+  }
+
+  .content-subtitle br {
+    display: none;
+  }
+
+  #enquiry-btn {
+    display: block;
+    margin-top: 0px;
+    /* width: 100%; */
+    margin-bottom: 350px;
+  }
+
+  .content-text {
+    font: 300 16px/32px Helvetica Neue;
+    letter-spacing: 0px;
+    color: #383838;
+    opacity: 1;
+  }
+
+  .content-head {
+    display: block;
+    text-align: left;
+    font: 300 16px/32px Helvetica Neue;
+    letter-spacing: 0px;
+    color: #8e8e8e;
+    opacity: 1;
+  }
+
+  .extra-info {
+    margin-top: 50px;
+  }
+
+  .extra-info-section div div {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 20px 0;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1300px) {
+  .map-container {
+    background-position-x: 100px;
+  }
+
+  .map-pointer {
+    left: 383.98px;
+  }
+
+  .footer-mail {
+    max-width: 300px !important;
+  }
+
+  .footer-mail input {
+    width: 100% !important;
+  }
+}

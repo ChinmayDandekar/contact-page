@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header id="nav-bar" class="nav-bar">
+    <div class="container">
+      <div class="logo">logo</div>
+      <nav class="desktop-nav">
+        <a href="#">projects</a>
+        <a href="#">about</a>
+        <a href="#">nri area</a>
+        <a href="#">news & thoughts</a>
+        <a href="#">contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger">
+        <img src="assets/images/hamburger.svg" alt="" />
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="#">projects</a>
+      <a href="#">about</a>
+      <a href="#">nri area</a>
+      <a href="#">news & thoughts</a>
+      <a href="#">contact</a>
+    </nav>
+  </header>
+  <section class="main-content-wrapper">
+    <section class="main-content">
+      <section class="map-container">
+        <div class="map-pointer"></div>
+      </section>
+      <div id="contact-container" class="sub-content">
+        <h2 class="content-title" style="margin-top: 80px">Contact Us</h2>
+        <p class="content-description">
+          When we aren't changing landscapes,<br />
+          we're making headlines.
+        </p>
+
+        <div class="contact-form">
+          <h3 class="form-title">Send us an Enquiry</h3>
+          <div class="input-wrapper">
+            <!-- <label for="name" class="input-label">Name</label> -->
+
+            <input id="name" class="input" type="text" required />
+            <label for="name" class="input-label">Name</label>
+            <div class="error-message" id="error-name"></div>
+          </div>
+          <div class="input-wrapper">
+            <!-- <label for="name" class="input-label">Name</label> -->
+            <input id="email" class="input" type="text" required />
+            <label for="email" class="input-label">Email Address</label>
+            <div class="error-message" id="error-email"></div>
+          </div>
+          <div class="input-wrapper">
+            <input id="mobile" class="input" type="text" required />
+            <label for="mobile" class="input-label">Mobile Number</label>
+            <div class="error-message" id="error-mobile"></div>
+          </div>
+
+          <div class="input-wrapper" style="display: flex; flex-direction: column; gap: 52px">
+            <div id="dropdownContainer"></div>
+
+            <div class="error-message" id="error-queryType" style="margin-top: -45px"></div>
+          </div>
+
+          <!-- Error container for second dropdown -->
+          <!-- <div class="error-message" id="error-subOption"></div> -->
+
+          <button class="primary-button" style="margin-right: -3px">
+            Send
+          </button>
+        </div>
+      </div>
+      <div class="vertical-divider"></div>
+      <div class="sub-content" style="position: relative">
+        <p class="map-text">
+          Lorem ipsum dolor sit amet - consetetur sadipscing elitr
+        </p>
+        <div class="extra-info">
+          <h2 class="content-subtitle">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+            <br />
+            diam nonumy.
+          </h2>
+          <p class="content-text">
+            +91 000 0000 000 | test1@gmail.com | test2@gmail.com
+          </p>
+
+          <button id="enquiry-btn" class="primary-button">
+            Send us an Enquiry
+          </button>
+
+          <div class="extra-info-section">
+            <h3 class="form-title">Sales Enquiry</h3>
+            <div>
+              <div>
+                <p class="content-head">Phone</p>
+                <p class="content-text">+91 000 0000 000</p>
+              </div>
+              <div>
+                <p class="content-head">Email</p>
+                <p class="content-text">test1@gmail.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="extra-info-section">
+            <h3 class="form-title">Redevelopment Centre</h3>
+            <div>
+              <div>
+                <p class="content-head">Phone</p>
+                <p class="content-text">+91 000 0000 000</p>
+              </div>
+              <div>
+                <p class="content-head">Email</p>
+                <p class="content-text">test2@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- Modal Container -->
+  <div id="modalOverlay" class="modal-overlay">
+    <div class="modal-content" style="position: relative">
+      <div class="contact-form">
+        <!-- Close Button -->
+        <button id="closeModalBtn">
+          <img src="/assets/images/cross.svg" alt="" />
+        </button>
+        <div class="input-wrapper">
+          <!-- <label for="name" class="input-label">Name</label> -->
+          <input id="name-modal" class="input" type="text" required />
+          <label for="name-modal" class="input-label">Name</label>
+
+          <div class="error-message" id="error-name-modal"></div>
+        </div>
+        <div class="input-wrapper">
+          <!-- <label for="name" class="input-label">Name</label> -->
+          <input id="email-modal" class="input" type="text" style="text-transform: none" required />
+          <label for="email-modal" class="input-label">Email Address</label>
+          <div class="error-message" id="error-email-modal"></div>
+        </div>
+        <div class="input-wrapper">
+          <!-- <label for="name" class="input-label">Name</label> -->
+          <input id="mobile-modal" class="input" type="text" required />
+          <label for="mobile-modal" class="input-label">Mobile Number</label>
+          <div class="error-message" id="error-mobile-modal"></div>
+        </div>
+
+        <div class="input-wrapper" style="display: flex; flex-direction: column; gap: 52px">
+          <div id="dropdownContainerModal"></div>
+          <div class="error-message" id="error-queryType-modal" style="margin-top: -45px"></div>
+        </div>
+
+        <button class="primary-button" style="margin-right: -3px">
+          Send
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="">
+    <section class="footer-wrapper">
+      <div class="flex-horizontal-container main-footer" style="align-items: start; padding: 45px 0px">
+        <div class="logo" style="margin-top: 8px">logo</div>
+        <div class="footer-links" style="margin-left: 70px">
+          <a href="#">Projects</a>
+          <a href="#">About</a>
+          <a href="#">NRI Area</a>
+          <a href="#">News & Thoughts</a>
+          <a href="#">Employee Corner</a>
+          <a href="#">CSR</a>
+          <a href="#">Contact</a>
+          <a href="#">Disclaimer</a>
+        </div>
+
+        <div class="footer-mail" style="margin-right: 5px">
+          <h2 style="margin-top: 2px">Get the latest news</h2>
+          <input type="text" placeholder="Enter email" />
+          <button class="primary-button" style="width: 130px; height: 40px">
+            Subscribe
+          </button>
+        </div>
+
+        <button onclick="scrollToTop()" class="to-top clear-btn">
+          <img src="assets/images/uparrow.png" alt="" />
+          <p>To the top</p>
+        </button>
+      </div>
+      <div class="horizontal-divider"></div>
+      <div class="flex-horizontal-container sub-footer">
+        <p class="footer-subtext">An ISO 9001:2008 Certified Company</p>
+        <p class="footer-subtext" style="margin-right: 68px">
+          © copyrights 2019
+        </p>
+        <img class="footer-img" src="assets/images/icon-imgs.png" />
+      </div>
+    </section>
+  </footer>
+
+  <script src="./script.js"></script>
+  <script src="./dropdown.js"></script>
+</body>
+
+</html>
