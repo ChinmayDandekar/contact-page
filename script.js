@@ -169,7 +169,7 @@ document
 
 
 
-  // Submit for mobile modal
+// Submit for mobile modal
 function handleModalSubmit() {
   console.log("insised model submit");
   // Clear previous errors
@@ -254,46 +254,6 @@ document
 // document
 //   .querySelector(".primary-button")
 //   .addEventListener("click", () => getFormDataAndSubmit(true));
-
-// Custom Drop Down
-
-const selected = document.getElementById("selected");
-const arrow = document.getElementById("arrow");
-const options = document.getElementById("options");
-const items = options.querySelectorAll("div");
-
-selected.addEventListener("click", () => {
-  options.style.display = options.style.display === "block" ? "none" : "block";
-  arrow.style.rotate = arrow.style.rotate === "0deg" ? "180deg" : "0deg";
-});
-
-items.forEach((item) => {
-  item.addEventListener("click", () => {
-    selected.textContent = item.getAttribute("data-value");
-
-    // Re-append arrow
-    selected.appendChild(arrow);
-
-    options.style.display = "none";
-    arrow.style.rotate = "0deg";
-
-    // Reset all checkmarks
-    items.forEach(
-      (i) => (i.querySelector(".checkmark").style.display = "none")
-    );
-
-    // Show checkmark on selected
-    item.querySelector(".checkmark").style.display = "inline";
-  });
-});
-
-// Close dropdown if clicking outside
-document.addEventListener("click", function (e) {
-  if (!e.target.closest(".custom-dropdown")) {
-    options.style.display = "none";
-    arrow.style.rotate = "0deg";
-  }
-});
 
 
 // helper functions

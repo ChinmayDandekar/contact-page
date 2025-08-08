@@ -350,9 +350,7 @@ body {
   color: #3971b1;
 }
 
-.contact-form .form-title {
-  /* margin-bottom: 10px; */
-}
+
 
 .form-title {
   text-align: left;
@@ -843,10 +841,7 @@ footer {
     font: 300 24px/36px Museo Slab;
   }
 
-  /* .contact-form {
-    display: hidden !important;
-    overflow: none;
-    } */
+
 
   .form-title {
     font: 300 24px/36px Museo Slab;
