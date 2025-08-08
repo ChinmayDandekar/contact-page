@@ -8,7 +8,7 @@ function createDropdown({ container, placeholder, options, onSelect }) {
   selected.textContent = placeholder;
 
   const arrow = document.createElement("img");
-  arrow.src = "/assets/images/arrow.svg";
+  arrow.src = "assets/images/arrow.svg";
   arrow.className = "arrow";
   arrow.style.rotate = "0deg";
   selected.appendChild(arrow);
@@ -20,7 +20,7 @@ function createDropdown({ container, placeholder, options, onSelect }) {
   options.forEach((opt) => {
     const optDiv = document.createElement("div");
     optDiv.setAttribute("data-value", opt);
-    optDiv.innerHTML = `${opt} <img class="checkmark" src="/assets/images/checkmark.png" style="display:none;">`;
+    optDiv.innerHTML = `${opt} <img class="checkmark" src="assets/images/checkmark.png" style="display:none;">`;
     optionsDiv.appendChild(optDiv);
 
     optDiv.addEventListener("click", () => {

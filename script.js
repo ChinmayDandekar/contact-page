@@ -251,9 +251,7 @@ document
   .querySelector(".modal-content .primary-button")
   .addEventListener("click", handleModalSubmit);
 
-// document
-//   .querySelector(".primary-button")
-//   .addEventListener("click", () => getFormDataAndSubmit(true));
+
 
 
 // helper functions
